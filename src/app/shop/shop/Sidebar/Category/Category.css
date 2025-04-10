@@ -1,0 +1,56 @@
+.sidebar-label-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sidebar-label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Radio Circle */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.sidebar-label-container:hover input + .checkmark {
+  background-color: #ccc;
+}
+
+.sidebar-label-container input:checked + .checkmark {
+  background-color: #2de4b9;
+}
+
+/* Checkmark (Inner Dot) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* Show checkmark when checked */
+.sidebar-label-container input:checked + .checkmark::after {
+  display: block;
+}
+.line {
+  margin-top: 3rem;
+  border-color: #ab8dc3;
+}

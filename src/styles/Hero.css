@@ -1,0 +1,49 @@
+/* Apply to the header's pseudo-element for text stroke effect */
+.absolute h1::after {
+  position: absolute;
+  inset: 0 0 0 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px #fff;  /* White stroke */
+  color: transparent;  /* Transparent fill */
+  font-size: inherit;  /* Inherit font size from the h1 */
+  font-family: inherit;  /* Inherit font family from the h1 */
+  font-weight: inherit;  /* Inherit font weight from the h1 */
+  letter-spacing: inherit;  /* Inherit letter-spacing from the h1 */
+  text-align: center;  /* Center the text */
+}
+
+/* Ensure the parent element of the header is correctly positioned */
+.absolute h1 {
+  position: relative;  /* Ensure the h1 is positioned relative for the ::after pseudo-element to be placed correctly */
+}
+
+/* NeonButtonSpecific.css */
+.neon-button-specific {
+  /* Add or modify your styles specifically for this button */
+  padding: 1.25rem 2.5rem;
+  background-color: #000;
+  color: #7eddc7;
+  border-radius: 360px;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 1px #1a1818;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Specific hover effect */
+  &:hover {
+    background: linear-gradient(135deg, #7eddc7, #4ff9f7);
+  }
+
+  /* Custom animation or other specific tweaks */
+  animation: gradient-shine 3s infinite linear;
+}
+
+@keyframes gradient-shine {
+  to {
+    background: linear-gradient(135deg, #7eddc7, #4ff9f7, #1a1818);
+  }
+}

@@ -1,0 +1,32 @@
+.contact-page {
+  background: linear-gradient(to top left, rgb(123, 213, 164) 10%, black 50%);
+  height: 100vh; /* Ensures it covers the full viewport height */
+  width: 100%;
+  margin-left: 50px;
+  padding-left: 50px;
+}
+
+.form-head {
+  background: linear-gradient(to right, rgb(99, 226, 167), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Optional: Makes the gradient stand out */
+}
+
+.form-heading {
+  color: rgb(79, 240, 227);
+}
+
+.form-image-wrapper {
+  display: flex;
+  align-items: flex-start; /* Align to top */
+  justify-content: flex-start;
+  gap: 50px; /* Space between form and image */
+  margin-top: 50px;
+  border: 2px solid red;
+}
+
+.logo-wrapper {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  margin-top: 25px;
+}
